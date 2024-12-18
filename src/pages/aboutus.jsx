@@ -1,4 +1,5 @@
 import React from "react";
+import ContactUs from "../components/contactus.jsx";
 
 const AboutUs = () => {
   return (
@@ -132,6 +133,7 @@ const AboutUs = () => {
             </div>
           </div>
         </section>
+        <ContactUs/>
       </div>
   );
 };

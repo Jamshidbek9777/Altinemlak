@@ -1,4 +1,4 @@
-import React from "react";
+import ContactUs from "../components/contactus.jsx";
 
 const Properties = () => {
     // Dummy data for properties
@@ -163,7 +163,7 @@ const Properties = () => {
             </div>
 
             {/* Properties Section */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-10 bg-gray-50">
                 <div className="container mx-auto px-6 lg:px-20">
                     <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">
                         Properties for Sale
@@ -191,6 +191,7 @@ const Properties = () => {
                     </div>
                 </div>
             </section>
+            <ContactUs/>
         </div>
     );
 };
