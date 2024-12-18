@@ -11,9 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-10">
       <div className="container mx-auto px-4 lg:px-20">
-        {/* Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {/* Branding Section */}
           <div>
             <h2 className="text-2xl font-bold text-yellow-400 mb-4">
               Our Company
@@ -24,7 +22,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigations */}
           <div>
             <h3 className="text-lg font-semibold text-yellow-400 mb-3">
               Quick Links
@@ -71,14 +69,14 @@ const Footer = () => {
               <li className="mb-1">
                 <span className="font-bold">Email:</span>{" "}
                 <a
-                  href="mailto:info@realestate.com"
+                  href="mailto:info@eduagency.uz"
                   className="hover:text-yellow-400 transition"
                 >
-                  info@realestate.com
+                  info@eduagency.uz
                 </a>
               </li>
               <li>
-                <span className="font-bold">Address:</span> Istanbul, Turkey
+                <span className="font-bold">Address:</span> Tashkent, Uzbekistan
               </li>
             </ul>
           </div>

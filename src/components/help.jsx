@@ -9,7 +9,7 @@ const Help = () => {
         </h2>
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
         <div className="text-center p-6 bg-white rounded-lg shadow-lg">
           <div className="mb-4">
             <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-pink-100 text-pink-600 text-xl font-bold">

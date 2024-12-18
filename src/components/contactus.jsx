@@ -30,7 +30,7 @@ const ContactUs = () => {
                     href="mailto:info@realestate.com"
                     className="hover:text-yellow-500 transition"
                   >
-                    info@realestate.com
+                    info@eduagency.com
                   </a>
                 </span>
               </li>
