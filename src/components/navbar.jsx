@@ -101,7 +101,32 @@ const Navbar = () => {
                         scrolling ? "text-black" : "text-white"
                     }`}
                 >
-                  Lang
+                  <div className="relative">
+                    <div className="flex items-center gap-[5px] outline-none border-none cursor-pointer">
+                      <img
+                          // src={selectedFlag}
+                          style={{width: "20px", objectFit: "cover"}}
+                      />
+                      <select
+                          className="bg-transparent border-none outline-none cursor-pointer"
+                          // onChange={(e) => changeLanguage(e.target.value)}
+                          // value={selectedLanguage}
+                      >
+                        <option className="dark:bg-[#fafbfd] text-black border-none" value="uz">
+                          Oʻzbek
+                        </option>
+                        <option className="dark:bg-[#fafbfd] text-black border-none" value="en">
+                          English
+                        </option>
+                        <option className="dark:bg-[#fafbfd] text-black border-none" value="tr">
+                          Türkçe
+                        </option>
+                        <option className="dark:bg-[#fafbfd] text-black border-none" value="ru">
+                          Русский
+                        </option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Wrapper>
