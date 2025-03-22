@@ -64,7 +64,7 @@ const Footer = () => {
             </h3>
             <ul>
               <li className="mb-1">
-                <span className="font-bold">Phone:</span> +90 123 456 78 90
+                <span className="font-bold">Phone:</span> +998 90 277 73 66
               </li>
               <li className="mb-1">
                 <span className="font-bold">Email:</span>{" "}

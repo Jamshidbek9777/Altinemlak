@@ -18,8 +18,12 @@ const Header = () => {
             <h3 className="text-lg lg:text-2xl font-light mb-6">
               Discover your dream property today!
             </h3>
-
-            <div className="bg-white/90 rounded-lg shadow-lg p-4 lg:p-6">
+            <div>
+              <button className="bg-yellow-500 text-xl p-4 px-6 rounded-lg">
+                Discover
+              </button>
+            </div>
+            {/* <div className="bg-white/90 rounded-lg shadow-lg p-4 lg:p-6">
               <form className="flex flex-col lg:flex-row items-center gap-4 lg:gap-2">
                 <select className="w-full h-12 px-4 text-black rounded-lg border border-gray-300 outline-none focus:border-blue-500">
                   <option value="" disabled selected>
@@ -57,7 +61,7 @@ const Header = () => {
                   </button>
                 </div>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
