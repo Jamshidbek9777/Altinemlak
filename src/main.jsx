@@ -8,6 +8,8 @@ import AboutUs from "./pages/aboutus.jsx";
 import Properties from "./pages/properties.jsx";
 import Franchize from "./pages/franchize.jsx";
 import Services from "./pages/services.jsx";
+import Trainings from "./pages/training.jsx";
+import RealEstateTech from "./pages/digital.jsx";
 
 const Root = () => {
   return (
@@ -20,6 +22,8 @@ const Root = () => {
           <Route path="/properties" element={<Properties />} />
           <Route path="/franchize" element={<Franchize />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/trainings" element={<Trainings />} />
+          <Route path="/tech" element={<RealEstateTech />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -46,24 +46,14 @@ const Navbar = () => {
               </div>
               <div className="hidden lg:flex gap-4 2xl:gap-8 text-sm items-center">
                 <a
-                  href="/"
+                  href="/trainings"
                   className={`transition text-base font-bold ${
                     scrolling
                       ? "text-black hover:text-yellow-400"
                       : "text-white hover:text-yellow-400"
                   }`}
                 >
-                  Home
-                </a>
-                <a
-                  href="/about-us"
-                  className={`transition text-base font-bold ${
-                    scrolling
-                      ? "text-black hover:text-yellow-400"
-                      : "text-white hover:text-yellow-400"
-                  }`}
-                >
-                  About us
+                  Certificate
                 </a>
                 <a
                   href="/franchize"
@@ -76,24 +66,24 @@ const Navbar = () => {
                   Franchize
                 </a>
                 <a
-                  href="/services"
+                  href="/tech"
                   className={`transition text-base font-bold ${
                     scrolling
                       ? "text-black hover:text-yellow-400"
                       : "text-white hover:text-yellow-400"
                   }`}
                 >
-                  Services
+                  Emlak Teknolojileri
                 </a>
                 <a
-                  href="/"
+                  href="/about-us"
                   className={`transition text-base font-bold ${
                     scrolling
                       ? "text-black hover:text-yellow-400"
                       : "text-white hover:text-yellow-400"
                   }`}
                 >
-                  Contact us
+                  About us
                 </a>
               </div>
               <div
