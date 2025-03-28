@@ -72,10 +72,10 @@ const Footer = () => {
               <li className="mb-1">
                 <span className="font-bold">{getText("email")}:</span>{" "}
                 <a
-                  href="mailto:info@eduagency.uz"
+                  href="mailto:turkistanmaster@altinemlak.com"
                   className="hover:text-yellow-400 transition"
                 >
-                  info@eduagency.uz
+                  turkistanmaster@altinemlak.com
                 </a>
               </li>
               <li>
