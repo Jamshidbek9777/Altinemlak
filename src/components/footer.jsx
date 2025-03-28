@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {
   FaFacebookF,
@@ -6,36 +6,38 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { getText } from "../languages";
+import { LanguageContext } from "../context/lang";
 
 const Footer = () => {
+  const { selectedLanguage, selectedFlag, changeLanguage } =
+    useContext(LanguageContext);
   return (
     <footer className="bg-gray-900 text-white py-10">
       <div className="container mx-auto px-4 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
           <div>
             <h2 className="text-2xl font-bold text-yellow-400 mb-4">
-              Our Company
+              {getText("companyName")}
             </h2>
-            <p className="text-gray-300">
-              Discover your dream property in Turkey with us. Reliable services
-              and trusted solutions.
-            </p>
+            <p className="text-gray-300">{getText("companyDescription")}</p>
           </div>
 
-          {/* Navigations */}
+          {/* Navigation */}
           <div>
             <h3 className="text-lg font-semibold text-yellow-400 mb-3">
-              Quick Links
+              {getText("quickLinks")}
             </h3>
             <ul>
               <li>
                 <Link to="/" className="hover:text-yellow-400 transition">
-                  Home
+                  {getText("home")}
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="hover:text-yellow-400 transition">
-                  About Us
+                  {getText("aboutUs")}
                 </Link>
               </li>
               <li>
@@ -43,7 +45,7 @@ const Footer = () => {
                   to="/properties"
                   className="hover:text-yellow-400 transition"
                 >
-                  Properties
+                  {getText("properties")}
                 </Link>
               </li>
               <li>
@@ -51,23 +53,24 @@ const Footer = () => {
                   to="/contact"
                   className="hover:text-yellow-400 transition"
                 >
-                  Contact Us
+                  {getText("contactUs")}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Section */}
+          {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold text-yellow-400 mb-3">
-              Contact
+              {getText("contact")}
             </h3>
             <ul>
               <li className="mb-1">
-                <span className="font-bold">Phone:</span> +998 90 277 73 66
+                <span className="font-bold">{getText("phone")}:</span> +998 90
+                277 73 66
               </li>
               <li className="mb-1">
-                <span className="font-bold">Email:</span>{" "}
+                <span className="font-bold">{getText("email")}:</span>{" "}
                 <a
                   href="mailto:info@eduagency.uz"
                   className="hover:text-yellow-400 transition"
@@ -76,7 +79,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <span className="font-bold">Address:</span> Tashkent, Uzbekistan
+                <span className="font-bold">{getText("address")}:</span>{" "}
+                {getText("tashkent")}
               </li>
             </ul>
           </div>
@@ -84,7 +88,7 @@ const Footer = () => {
           {/* Social Media */}
           <div>
             <h3 className="text-lg font-semibold text-yellow-400 mb-3">
-              Follow Us
+              {getText("followUs")}
             </h3>
             <div className="flex gap-4">
               <a href="#" className="hover:text-yellow-400 transition">
@@ -106,8 +110,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm">
           <p>
-            &copy; {new Date().getFullYear()} Real Estate Co. All Rights
-            Reserved.
+            &copy; {new Date().getFullYear()} {getText("copyright")}
           </p>
         </div>
       </div>

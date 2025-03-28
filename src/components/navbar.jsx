@@ -1,9 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import Wrapper from "./wrapper.jsx";
+import { getText } from "../languages/index.js";
+import { Dropdown, Menu } from "antd";
+import { LanguageContext } from "../context/lang.jsx";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
+  const { selectedLanguage, selectedFlag, changeLanguage } =
+    useContext(LanguageContext);
 
   //scroll usage
   useEffect(() => {
@@ -20,6 +26,66 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const languageMenu = (
+    <Menu
+      onClick={({ key }) => changeLanguage(key)}
+      items={[
+        {
+          key: "uz",
+          label: (
+            <div className="flex items-center gap-2">
+              <img
+                src="/img/flag-uz.svg"
+                alt="O'zbek"
+                className="w-5 h-5 object-cover"
+              />
+              Oʻzbek
+            </div>
+          ),
+        },
+        {
+          key: "en",
+          label: (
+            <div className="flex items-center gap-2">
+              <img
+                src="/img/flag-en.svg"
+                alt="English"
+                className="w-5 h-5 object-cover"
+              />
+              English
+            </div>
+          ),
+        },
+        {
+          key: "tr",
+          label: (
+            <div className="flex items-center gap-2">
+              <img
+                src="/img/flag-tr.png"
+                alt="Türkçe"
+                className="w-5 h-5 object-cover"
+              />
+              Türkçe
+            </div>
+          ),
+        },
+        {
+          key: "ru",
+          label: (
+            <div className="flex items-center gap-2">
+              <img
+                src="/img/flag-ru.svg"
+                alt="Русский"
+                className="w-5 h-5 object-cover"
+              />
+              Русский
+            </div>
+          ),
+        },
+      ]}
+    />
+  );
 
   return (
     <>
@@ -53,7 +119,7 @@ const Navbar = () => {
                       : "text-white hover:text-yellow-400"
                   }`}
                 >
-                  Certificate
+                  {getText("nav1")}
                 </a>
                 <a
                   href="/franchize"
@@ -63,7 +129,7 @@ const Navbar = () => {
                       : "text-white hover:text-yellow-400"
                   }`}
                 >
-                  Franchize
+                  {getText("nav2")}
                 </a>
                 <a
                   href="/tech"
@@ -73,7 +139,7 @@ const Navbar = () => {
                       : "text-white hover:text-yellow-400"
                   }`}
                 >
-                  Emlak Teknolojileri
+                  {getText("nav3")}
                 </a>
                 <a
                   href="/about-us"
@@ -83,7 +149,7 @@ const Navbar = () => {
                       : "text-white hover:text-yellow-400"
                   }`}
                 >
-                  About us
+                  {getText("nav4")}
                 </a>
               </div>
               <div
@@ -92,42 +158,23 @@ const Navbar = () => {
                 }`}
               >
                 <div className="relative">
-                  <div className="flex items-center gap-[5px] outline-none border-none cursor-pointer">
-                    <img
-                      // src={selectedFlag}
-                      style={{ width: "20px", objectFit: "cover" }}
-                    />
-                    <select
-                      className="bg-transparent border-none outline-none cursor-pointer"
-                      // onChange={(e) => changeLanguage(e.target.value)}
-                      // value={selectedLanguage}
-                    >
-                      <option
-                        className="dark:bg-[#fafbfd] text-black border-none"
-                        value="uz"
-                      >
-                        Oʻzbek
-                      </option>
-                      <option
-                        className="dark:bg-[#fafbfd] text-black border-none"
-                        value="en"
-                      >
-                        English
-                      </option>
-                      <option
-                        className="dark:bg-[#fafbfd] text-black border-none"
-                        value="tr"
-                      >
-                        Türkçe
-                      </option>
-                      <option
-                        className="dark:bg-[#fafbfd] text-black border-none"
-                        value="ru"
-                      >
-                        Русский
-                      </option>
-                    </select>
-                  </div>
+                  <Dropdown
+                    overlay={languageMenu}
+                    trigger={["click"]}
+                    placement="bottom"
+                  >
+                    <div className="flex items-center gap-[5px] cursor-pointer">
+                      <img
+                        src={selectedFlag}
+                        style={{ width: "20px", objectFit: "cover" }}
+                        alt="Selected Language"
+                      />
+                      <span className=" text-sm font-bold">
+                        {selectedLanguage.toUpperCase()}
+                      </span>
+                      <IoIosArrowDown className=" text-sm" size={15} />
+                    </div>
+                  </Dropdown>
                 </div>
               </div>
             </div>

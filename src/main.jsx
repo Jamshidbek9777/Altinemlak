@@ -10,23 +10,26 @@ import Franchize from "./pages/franchize.jsx";
 import Services from "./pages/services.jsx";
 import Trainings from "./pages/training.jsx";
 import RealEstateTech from "./pages/digital.jsx";
+import { LanguageProvider } from "./context/lang.jsx";
 
 const Root = () => {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes className="min-h-screen">
-          <Route path="/" element={<App />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/properties" element={<Properties />} />
-          <Route path="/franchize" element={<Franchize />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/trainings" element={<Trainings />} />
-          <Route path="/tech" element={<RealEstateTech />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes className="min-h-screen">
+            <Route path="/" element={<App />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/properties" element={<Properties />} />
+            <Route path="/franchize" element={<Franchize />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/trainings" element={<Trainings />} />
+            <Route path="/tech" element={<RealEstateTech />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </LanguageProvider>
     </>
   );
 };

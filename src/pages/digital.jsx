@@ -1,4 +1,5 @@
 import React from "react";
+import { getText } from "../languages";
 
 const RealEstateTech = () => {
   return (
@@ -6,10 +7,10 @@ const RealEstateTech = () => {
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">
-          Emlak Teknolojileri ve Danışmanlık
+          {getText("realEstateTechTitle")}
         </h2>
         <p className="text-lg text-gray-600 mb-6">
-          Geleceğin Emlakçılığı, Dijitalle Başlar
+          {getText("realEstateTechSubtitle")}
         </p>
       </div>
 
@@ -17,46 +18,45 @@ const RealEstateTech = () => {
       <div className="max-w-4xl mx-auto space-y-4">
         <div className="p-4 bg-white rounded-lg shadow">
           <h3 className="text-xl font-semibold text-gray-800">
-            Profesyonel Emlak Yönetim Sistemi (CRM)
+            {getText("crmSystemTitle")}
           </h3>
-          <p className="text-gray-600">Emlak süreçlerinizi dijitalleştirin.</p>
+          <p className="text-gray-600">{getText("crmSystemDescription")}</p>
         </div>
 
         <div className="p-4 bg-white rounded-lg shadow">
           <h3 className="text-xl font-semibold text-gray-800">
-            Web Sitesi + Mobil Uygulama + İlan Entegrasyonu
+            {getText("webMobileTitle")}
           </h3>
-          <p className="text-gray-600">Tüm dijital platformlarda yer alın.</p>
+          <p className="text-gray-600">{getText("webMobileDescription")}</p>
         </div>
 
         <div className="p-4 bg-white rounded-lg shadow">
           <h3 className="text-xl font-semibold text-gray-800">
-            Dijital Pazarlama & Reklam Otomasyonu
+            {getText("digitalMarketingTitle")}
           </h3>
-          <p className="text-gray-600">Emlak portföyünüzü büyütün.</p>
+          <p className="text-gray-600">
+            {getText("digitalMarketingDescription")}
+          </p>
         </div>
 
         <div className="p-4 bg-white rounded-lg shadow">
           <h3 className="text-xl font-semibold text-gray-800">
-            Proje Geliştirme & Yatırım Danışmanlığı
+            {getText("investmentTitle")}
           </h3>
-          <p className="text-gray-600">Yatırımlarınızı optimize edin.</p>
+          <p className="text-gray-600">{getText("investmentDescription")}</p>
         </div>
 
         <div className="p-4 bg-white rounded-lg shadow">
           <h3 className="text-xl font-semibold text-gray-800">
-            Portföy Yönetimi & Gelir-Gider Optimizasyonu
+            {getText("portfolioTitle")}
           </h3>
-          <p className="text-gray-600">Verimliliği artırın.</p>
+          <p className="text-gray-600">{getText("portfolioDescription")}</p>
         </div>
       </div>
 
       {/* Extra Features */}
       <div className="mt-6 text-center">
-        <p className="text-gray-700">
-          🔍 Yapay zekâ destekli analizler <br />
-          📈 Raporlama ve satış verimliliği modülleri
-        </p>
+        <p className="text-gray-700">{getText("extraFeatures")}</p>
       </div>
     </section>
   );
